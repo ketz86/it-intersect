@@ -5,11 +5,11 @@
 ## About
 ___
 
-Being a wrapper around the **IntersectionObserver API**, this simple component is useful when your application need to respond to the presence of particular component in the vieport.
+Being a wrapper around the **IntersectionObserver API**, this simple component is useful when your application need to respond to the presence of particular component in the viewport.
 
 The best use case is probably for infinite scroll.
 
-Given that you're rendering a list inside a container component, if you place this component after the list in that container you can listen for the intersection event and perform asyncrounous operations to update your list
+Given that you're rendering a list inside a container component, if you place this component after the list in that container you can listen for the intersection event and perform asynchronous operations to update your list
 
 ## IMPORTANT
 
@@ -32,10 +32,11 @@ This is an example for infinite scroll loading
 <template>
   <div>
     <!-- your list -->
-    <div v-for="item in lits">
+    <div v-for="item in list">
       {{item}}
     </div>
-    <!-- place the component right after your list , you can optionally insert text or other component inside it-intersect, it comes with a default slot-->
+    <!-- place the component right after your list --> 
+    <!-- you can optionally insert text or other components inside it-intersect, it comes with a default slot-->
     <it-intersect @it-intersected="fetchMore"/>
   </div>
 </template>
@@ -54,7 +55,13 @@ This is an example for infinite scroll loading
 </script>
 ```
 
-## Props
+## API
+
+### Event
+
+ **it-intersected** : the event that gets triggered when the component intersect the root
+
+### Props
 
 Prop name |  Type | Description | Default
 --- | --- | --- | --- | 
@@ -63,6 +70,8 @@ refName | String | Set the ref value for this element, useful if you need more t
 rootMargin | Number | The margin around the component used to calculate its intersection with its root element | `0`
 root | String | A string that can be used as query selector for the IntersectionObserver.If none is given it use the viewport | -
 threshold | Number | A number between 0 and 1 representing the ratio of the component that has to intersect before the event gets triggered. If 0, the event will trigger as soon as the element intersect with the root. If 1, the event will trigger only when all the component will be in the root viewport. | `0`
+
+
 
 ## License
 MIT
