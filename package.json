@@ -1,0 +1,33 @@
+{
+  "name": "it-intersect",
+  "version": "0.0.1",
+  "description": "A simple component that use the IntersectionObserver to notify when it intersect with the viewport or a an element",
+  "author": {
+    "name": "Davide Luchetta",
+    "url": "https://github.com/ketz86"
+  },
+  "repository": "ketz86/it-intersect",
+  "homepage": "https://github.com/ketz86/it-intersect",
+  "keywords": [
+    "vue",
+    "IntersectionObserver",
+    "infinite scroll",
+    "ui",
+    "component",
+    "infinite"
+  ],
+  "main": "dist/it-intersect.common.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "bili --format cjs,umd,es,umd-min --module-name ItIntersect --compress"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "vue": "2.5.9"
+  },
+  "devDependencies": {
+    "bili": "^0.19.0"
+  }
+}
