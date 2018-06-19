@@ -1,6 +1,6 @@
 {
   "name": "it-intersect",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A simple component that use the IntersectionObserver to notify when it intersect with the viewport or a an element",
   "author": {
     "name": "Davide Luchetta",
@@ -32,6 +32,6 @@
   },
   "dependencies": {
     "element-in-view": "^0.1.0",
-    "lodash.debounce": "^4.0.8"
+    "lodash.throttle": "^4.1.1"
   }
 }

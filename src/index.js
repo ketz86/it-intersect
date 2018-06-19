@@ -1,5 +1,5 @@
 import inView from 'element-in-view'
-import debounce from 'lodash.debounce'
+import throttle from 'lodash.throttle'
 
 const ItIntersect = {
   name : 'it-intersect',
@@ -36,7 +36,7 @@ const ItIntersect = {
     const observer = new IntersectionObserver( this.onIntersect, options)
     observer.observe( this.$refs[this.refName] )
 
-    debounce(this.checkInView, 400)
+    throttle(this.checkInView, 400)
 
   },
   methods: {
