@@ -1,3 +1,6 @@
+import inView from 'element-in-view'
+import debounce from 'lodash.debounce'
+
 const ItIntersect = {
   name : 'it-intersect',
   props : {
@@ -33,8 +36,15 @@ const ItIntersect = {
     const observer = new IntersectionObserver( this.onIntersect, options)
     observer.observe( this.$refs[this.refName] )
 
+    debounce(this.checkInView, 400)
+
   },
   methods: {
+    checkInView() {
+      if ( inView(this.$refs[this.refName]) ) {
+        this.$emit('it-intersected')
+      }
+    },
     onIntersect(entries){
       entries.forEach((entry) => {
         if(entry.isIntersecting){
