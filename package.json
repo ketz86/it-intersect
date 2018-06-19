@@ -1,6 +1,6 @@
 {
   "name": "it-intersect",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A simple component that use the IntersectionObserver to notify when it intersect with the viewport or a an element",
   "author": {
     "name": "Davide Luchetta",
@@ -16,7 +16,7 @@
     "component",
     "infinite"
   ],
-  "main": "dist/it-intersect.common.js",
+  "main": "dist/it-intersect.cjs.js",
   "files": [
     "dist"
   ],
